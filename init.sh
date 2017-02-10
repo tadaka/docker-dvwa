@@ -5,7 +5,7 @@
 USAGE="init.sh [-h] [-r] [-d ipv4addr] [-b]
           -h : Display this help
           -r : run the docker image
-          -d ipv4addr : set the 
+          -d ipv4addr : set the docker deamon DNS option
           -b : force a rebuild
           -c : restore the default DNS settings
       "
