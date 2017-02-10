@@ -69,6 +69,11 @@ if [[ $RUN == YES ]]; then
 fi
 
 if [[ $CLEANUP == YES ]]; then
+  # must be root
+  if [ "$EUID" -ne 0 ]
+  then echo "This option must be run as root." >&2
+    exit 1
+  fi
   echo "restoring docker settings"
   cat /etc/default/docker_old > /etc/default/docker
   echo "default restored"
