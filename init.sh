@@ -7,6 +7,7 @@ USAGE="init.sh [-h] [-r] [-d ipv4addr] [-b]
           -r : run the docker image
           -d ipv4addr : set the 
           -b : force a rebuild
+          -c : restore the default DNS settings
       "
 DVWA_URL=https://github.com/ethicalhack3r/DVWA/archive/master.zip
 IMAGE="dvwa"
@@ -18,7 +19,7 @@ CLEANUP=NO
 REBUILD=NO
 
 # use getopts to handle the args
-while getopts "hrd:b" opt; do
+while getopts "hrd:bc" opt; do
   case $opt in
     h) 
       echo "$USAGE" >&2
@@ -42,11 +43,13 @@ while getopts "hrd:b" opt; do
       echo "restarting docker service..."
       sleep 2
       systemctl restart docker.service
-      CLEANUP=YES
       ;;        
     b)
-      echo "Forcing rebuild of container..."
+      echo "Forcing rebuild of container..." >&2
       REBUILD=YES
+      ;;
+    c)
+      CLEANUP=YES
       ;;
     \?)
       echo "$USAGE" >&2
