@@ -20,7 +20,7 @@ __/\\\\\_____/\\\__/\\\\\\\\\\\\\\\_____/\\\\\\\\\_____/\\\\\\\\\\\\\\\_______/\
 - Docker `apt-get install docker.io`
 - a computer might be useful to have as well... :D
 
-You could probably run this on linux, but you won't have use of the init.sh script, which is probably fine
+You could probably run this on windows, but you won't have use of the init.sh script, which is probably fine
 as it only marginally makes the process easier and in some cases probably makes it harder.
 
 ### How to get going on your way
