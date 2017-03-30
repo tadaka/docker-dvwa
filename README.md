@@ -25,6 +25,9 @@ as it only marginally makes the process easier and in some cases probably makes 
 
 ### How to get going on your way
 - run `./ddvwa` to build the docker container which will contain DVWA.
+ - you may need to configure the container to use your organizations DNS server, for example on some univeristy networks
+   docker won't be able to reach out to the net to get deps to build your container
+ - ex: `./ddvwa -d 152.13.18.154 -r` to run it nicely
 - now run `./ddvwa -r` to actually start the container up.
 
 ### Some notes on ddvwa script
