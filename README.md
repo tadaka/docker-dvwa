@@ -24,16 +24,16 @@ You could probably run this on windows, but you won't have use of the init.sh sc
 as it only marginally makes the process easier and in some cases probably makes it harder.
 
 ### How to get going on your way
-- run `./init.sh` to build the docker container which will contain DVWA.
-- now run `./init.sh -r` to actually start the container up.
+- run `./ddvwa` to build the docker container which will contain DVWA.
+- now run `./ddvwa -r` to actually start the container up.
 
-### Some notes on init.sh
+### Some notes on ddvwa script
 - I really didn't test many combinations of the arguments, so some combinations/permutations might not work as expected.
 - View the source before using it to make sure you're cool with what it does ("you should do this before running any scripts, really).
 
 #### USAGE:
 ``` sh
-init.sh [-h] [-r] [-d ipv4addr] [-b]
+ddvwa [-h] [-r] [-d ipv4addr] [-b]
           -h : Display this help
           -r : run the docker image
           -d ipv4addr : set the docker deamon DNS option
