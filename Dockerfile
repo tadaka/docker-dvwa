@@ -17,6 +17,7 @@ RUN wget https://github.com/ethicalhack3r/DVWA/archive/master.zip && \
     cp -r DVWA-master/* /app && \
     rm -rf DVWA-master DVWA-master.zip && \
     cp /app/config/config.inc.php.dist /app/config/config.inc.php && \
+    chmod +777 ./app/config && \
     chmod +777 ./app/hackable/uploads/ && \
     chmod +777 ./app/external/phpids/0.6/lib/IDS/tmp/phpids_log.txt && \
     sed -i 's/allow_url_include = Off/allow_url_include = On/g' /etc/php5/apache2/php.ini && \
