@@ -1,6 +1,6 @@
 FROM tutum/lamp:latest
 
-MAINTAINER Cory Sabol <corygrandhamsabol@gmail.com>
+MAINTAINER Jason Wood <tadaka@gmail.com>
 
 # update sources and install php5
 RUN rm -rf /app && \
