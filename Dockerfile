@@ -1,6 +1,7 @@
 FROM tutum/lamp:latest
 
 MAINTAINER Jason Wood <tadaka@gmail.com>
+# Forked this repo from corysabol/docker-dvwa
 
 # update sources and install php5
 RUN rm -rf /app && \
